@@ -1,0 +1,18 @@
+@PowerShellWebFunction_HostAddress = http://localhost:5299
+
+GET {{PowerShellWebFunction_HostAddress}}/v1/function/help
+Accept: application/json
+
+###
+
+GET {{PowerShellWebFunction_HostAddress}}/v1/function/ExampleCreateUser
+Accept: application/json
+
+###
+POST {{PowerShellWebFunction_HostAddress}}/v1/function/ExampleCreateUser
+Content-Type: application/json
+Accept-Language: en-US,en;q=0.5
+{
+    "UserName": "rwilliams",
+    "Email": "robin@goat.funny"
+}
